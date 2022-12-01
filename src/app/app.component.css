@@ -1,0 +1,40 @@
+.cabecalho{
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #FFE0CC;
+    border-bottom: 1px solid orange;
+    display: flex;
+    justify-content: space-between;
+}
+.cabecalho-logo{
+    width: 7%;
+}
+.usuario-avatar{
+    width: 20%;
+    border-radius: 50px;
+}
+.informacoes-cabecalho{
+    display: flex;
+    align-items: center;
+    width: 25%;    
+}
+.usuario-cabecalho{
+    display: flex;
+    align-items: center;
+    border-left: 1px solid black;
+    padding-left: 20px;
+    margin-left: 15px;
+}
+.usuario-informacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+.usuario-informacoes>p{
+    margin: 0;
+}
+.usuario-nome{
+    font-weight: bolder;
+}

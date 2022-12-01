@@ -1,0 +1,14 @@
+p, h2{
+  margin: 0;
+}
+.polo-listar-pagina{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.polo-listar-cabecalho{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  width: 90%
+}

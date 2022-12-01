@@ -1,0 +1,23 @@
+p, h2{
+  margin: 0;
+}
+.polo-cadastrar-pagina{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.polo-cadastrar-cabecalho{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 90%
+}
+.polo-cadastrar-cabecalho-input{
+  height: 30px;
+}
+.polo-cadastrar-titulo{
+  /* margin-left: 40px; */
+}
