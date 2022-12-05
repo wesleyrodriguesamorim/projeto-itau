@@ -41,7 +41,7 @@ export class PoloCadastrarComponent implements OnInit {
     business: new FormControl(''),
     valuation: new FormControl(0),
     cnpj: new FormControl(0),
-    active: new FormControl(false),
+    ativo: new FormControl(false),
   });
 
   constructor(
@@ -71,13 +71,18 @@ export class PoloCadastrarComponent implements OnInit {
     this.router.navigate(['/polo-listar'])
   }
   construirFormulario(polo: IBusiness){
-    // this.poloFormulario.setValue(
-    //   {
-    //     nome: polo.name,
-    //     business: polo.business,
-    //     cnpj: polo.cnpj,
-    //     valuation: polo.valuation,
-    //     active: polo.active
-    //   });
+    this.poloFormulario.setValue(
+      {
+        nome: polo.name,
+        business: polo.business,
+        cnpj: polo.cnpj,
+        valuation: polo.valuation,
+        ativo: polo.active,
+        cep: polo.cep,
+        nomeDaRua: '',
+        bairro: '',
+        estado: '',
+        cidade: '',
+      });
   }
 }

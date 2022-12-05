@@ -45,7 +45,7 @@
   
         <mat-form-field class="campo-input">
           <mat-label>Business</mat-label>
-          <input matInput formControlName="Business">
+          <input matInput formControlName="business">
         </mat-form-field> 
   
         <mat-form-field class="campo-input">
@@ -58,15 +58,18 @@
           <input matInput formControlName="cnpj">
         </mat-form-field> 
   
-        <!-- <mat-form-field class="campo-input">
+        <mat-form-field class="campo-input">
           <mat-label>Ativo?</mat-label>
-          <mat-select>
-            <mat-option>Sim</mat-option>
-            <mat-option>Não</mat-option>
+          <mat-select  formControlName="ativo">
+            <mat-option value="true">Sim</mat-option>
+            <mat-option value="false">Não</mat-option>
           </mat-select>
-        </mat-form-field> -->
+        </mat-form-field>
       </div>
     </form>
-    
+  </div>
+  <div class="botoes">
+    <button mat-raised-button color='basic'>Voltar</button>
+    <button mat-raised-button color="warn">Salvar</button>
   </div>
 </div>
