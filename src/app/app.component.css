@@ -3,7 +3,7 @@
     padding: 15px;
     width: 100%;
     background-color: #FFE0CC;
-    border-bottom: 1px solid orange;
+    border-bottom: 2px solid orange;
     display: flex;
     justify-content: space-between;
 }

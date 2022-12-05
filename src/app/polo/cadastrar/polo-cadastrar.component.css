@@ -23,5 +23,10 @@ p, h2{
   margin-left: 1%;
 }
 .botoes{
-  
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+}
+.botoes > button{
+  margin-left: 1%;
 }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 interface IBusiness {
   id: number
@@ -32,16 +32,16 @@ export class PoloCadastrarComponent implements OnInit {
   };
 
   poloFormulario = new FormGroup({
-    cep: new FormControl(''),
-    nomeDaRua: new FormControl(''),
-    bairro: new FormControl(''),
-    estado: new FormControl(''),
-    cidade: new FormControl(''),
-    nome: new FormControl(''),
-    business: new FormControl(''),
-    valuation: new FormControl(0),
-    cnpj: new FormControl(0),
-    ativo: new FormControl(false),
+    cep: new FormControl('', Validators.required),
+    nomeDaRua: new FormControl('', Validators.required),
+    bairro: new FormControl('', Validators.required),
+    estado: new FormControl('', Validators.required),
+    cidade: new FormControl('', Validators.required),
+    nome: new FormControl('', Validators.required),
+    business: new FormControl('', Validators.required),
+    valuation: new FormControl(0, Validators.required),
+    cnpj: new FormControl(0, Validators.required),
+    ativo: new FormControl(false, Validators.required),
   });
 
   constructor(
@@ -64,12 +64,18 @@ export class PoloCadastrarComponent implements OnInit {
         this.polo = data;
         console.log(this.polo.active);
         this.construirFormulario(this.polo);
-      })
-    }
+      }
+    )
+  }
 
-  redirecionarPagina(){   
+  redirecionarPagina(botao: number){
+    if(botao === 1){
+      console.log(this.poloFormulario.value);
+      console.log(this.poloFormulario.errors);
+    }
     this.router.navigate(['/polo-listar'])
   }
+
   construirFormulario(polo: IBusiness){
     this.poloFormulario.setValue(
       {
@@ -83,6 +89,7 @@ export class PoloCadastrarComponent implements OnInit {
         bairro: '',
         estado: '',
         cidade: '',
-      });
-  }
+      }
+    );
+  }  
 }
