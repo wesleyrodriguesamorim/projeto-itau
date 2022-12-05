@@ -1,20 +1,72 @@
 <div class="polo-cadastrar-pagina">
   <div class="polo-cadastrar-cabecalho">
     <div class="polo-cadastrar-titulo">
-    <h2>Polo 'name'</h2>
-    <p>Exibindo detalhes do polo 'nome'#'id</p>
+    <h2>Polo {{polo.name}}</h2>
+    <p>Exibindo detalhes do polo {{polo.name}}#{{polo.id}}</p>
     </div>
   </div>
   <div class="polo-cadastrar-formulario">
-    <p>Detalhes do Endereço</p>
-    <div class="endereco-campos">
-
-    </div>
-    <p>Detalhes do Empresa</p>
-    
-    <div class="Empresa-campos">
-
-    </div>
+    <form [formGroup]="poloFormulario">
+      <p>Detalhes do Endereço</p>
+      <div class="endereco-campos">
+        <mat-form-field class="campo-input">
+          <mat-label>CEP</mat-label>
+          <input matInput formControlName="cep">
+        </mat-form-field>
+  
+        <mat-form-field class="campo-input">
+          <mat-label>Nome da Rua</mat-label>
+          <input matInput formControlName="nomeDaRua">
+        </mat-form-field> 
+  
+        <mat-form-field class="campo-input">
+          <mat-label>Bairro</mat-label>
+          <input matInput formControlName="bairro">
+        </mat-form-field> 
+  
+        <mat-form-field class="campo-input">
+          <mat-label>Estado</mat-label>
+          <input matInput formControlName="estado">
+        </mat-form-field> 
+  
+        <mat-form-field class="campo-input">
+          <mat-label>Cidade</mat-label>
+          <input matInput formControlName="cidade">
+        </mat-form-field>
+        
+      </div>
+      <p>Detalhes do Empresa</p>
+      
+      <div class="Empresa-campos">
+        <mat-form-field class="campo-input">
+          <mat-label>Nome</mat-label>
+          <input matInput formControlName="nome">
+        </mat-form-field>
+  
+        <mat-form-field class="campo-input">
+          <mat-label>Business</mat-label>
+          <input matInput formControlName="Business">
+        </mat-form-field> 
+  
+        <mat-form-field class="campo-input">
+          <mat-label>Valuation</mat-label>
+          <input matInput formControlName="valuation">
+        </mat-form-field> 
+  
+        <mat-form-field class="campo-input">
+          <mat-label>CNPJ</mat-label>
+          <input matInput formControlName="cnpj">
+        </mat-form-field> 
+  
+        <!-- <mat-form-field class="campo-input">
+          <mat-label>Ativo?</mat-label>
+          <mat-select>
+            <mat-option>Sim</mat-option>
+            <mat-option>Não</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+      </div>
+    </form>
     
   </div>
 </div>

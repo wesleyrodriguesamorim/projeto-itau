@@ -3,12 +3,25 @@ p, h2{
 }
 .polo-listar-pagina{
   display: flex;
+  flex-direction: column;
   width: 100%;
-  justify-content: center;
+  align-items: center;
 }
 .polo-listar-cabecalho{
   display: flex;
   justify-content: space-between;
   padding: 15px;
   width: 90%
+}
+.polo-listar-tabela{
+  width: 90%;
+}
+.situacao-check{
+  color: green;
+}
+.situacao-cancel{
+  color: red;
+}
+.icone-acao{
+  cursor: pointer;
 }

@@ -7,9 +7,46 @@
     </div>
     
     <mat-form-field class="example-full-width">
-      <mat-label>Long Last Name That Will Be Truncated</mat-label>
+      <mat-label>Pesquisar...</mat-label>
       <input matInput>
-    </mat-form-field>
-    
+    </mat-form-field> 
+  </div>
+
+  <div class='polo-listar-tabela'>
+    <table mat-table [dataSource]="listaDados">
+      <ng-container matColumnDef="Nome">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let polo"> {{polo.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Business">
+        <th mat-header-cell *matHeaderCellDef> Business </th>
+        <td mat-cell *matCellDef="let polo"> {{polo.business}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Valuation">
+        <th mat-header-cell *matHeaderCellDef> Valuation </th>
+        <td mat-cell *matCellDef="let polo"> {{polo.valuation}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Situação">
+        <th mat-header-cell *matHeaderCellDef> Situação </th>
+        <td mat-cell *matCellDef="let polo">
+          <mat-icon *ngIf="polo.active" class="situacao-check">check_circle</mat-icon> 
+          <mat-icon *ngIf="!polo.active" class="situacao-cancel">cancel</mat-icon> 
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Ação">
+        <th mat-header-cell *matHeaderCellDef> Ação </th>
+        <td mat-cell *matCellDef="let polo"> 
+          <mat-icon (click)="redirecionarPagina(polo.id)" class="icone-acao">remove_red_eye</mat-icon> 
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
   </div>
 </div>

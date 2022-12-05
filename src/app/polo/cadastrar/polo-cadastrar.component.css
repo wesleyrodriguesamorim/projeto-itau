@@ -18,6 +18,7 @@ p, h2{
 .polo-cadastrar-cabecalho-input{
   height: 30px;
 }
-.polo-cadastrar-titulo{
-  /* margin-left: 40px; */
+.campo-input{
+  width: 28%;
+  margin-left: 1%;
 }
